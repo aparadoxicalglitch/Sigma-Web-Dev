@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id and Classes in HTML</title>
+    <style>
+        /* Styling an element by ID */
+        #main-title {
+            color: darkblue;
+            font-size: 28px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Styling elements by class */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .note {
+            border: 1px solid #999;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">Understanding ID and Class in HTML</h1>
+
+    <p>This is a normal paragraph.</p>
+
+    <p class="highlight">This paragraph uses a class called <code>highlight</code> to stand out.</p>
+
+    <p class="note">This paragraph uses a class named <code>note</code> for a note-like appearance.</p>
+
+    <div class="note highlight">You can also combine multiple classes in one element like this.</div>
+
+    <p id="unique-paragraph">This paragraph has a unique <code>id</code> called <code>unique-paragraph</code>.</p>
+
+    <!-- You can target IDs in CSS with #idName and classes with .className. -->
+
+</body>
+</html>

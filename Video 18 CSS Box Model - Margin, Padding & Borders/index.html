@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        /* Universal Selector to reset default spacing */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Common Box Styles */
+        .box {
+            background-color: aqua; /* Light blue background for both boxes */
+        }
+
+        /* Box 1 Styles */
+        .box1 {
+            color: yellow; /* Text color */
+            padding: 10px; /* Space between content and border */
+            margin: 35px; /* Space outside the box */
+            border: 2px solid blue; /* Blue border */
+            height: 200px; /* Fixed height */
+            box-sizing: border-box; /* Includes padding & border in height */
+        }
+
+        /* Box 2 Styles */
+        .box2 {
+            color: red; /* Text color */
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        /* Margin Collapse Example */
+
+        /* Two vertically stacked elements with top and bottom margins */
+        .collapse-example p {
+            margin: 20px 0;
+            background-color: lightgray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center; margin: 20px;">CSS Box Model</h1>
+
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+
+    <!-- Margin Collapse Section -->
+    <section class="collapse-example">
+        <h2 style="margin: 20px;">Margin Collapse Demo</h2>
+        <p>First Paragraph (has bottom margin)</p>
+        <p>Second Paragraph (has top margin)</p>
+        <!-- Even though both paragraphs have margin, only one margin space is applied between them due to margin collapse -->
+    </section>
+
+</body>
+</html>

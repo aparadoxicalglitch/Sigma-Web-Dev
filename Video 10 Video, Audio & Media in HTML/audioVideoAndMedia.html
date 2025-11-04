@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video, Audio & Media in HTML</title>
+</head>
+<body>
+
+    <h1 align = "center">Embedding Media in HTML</h1>
+
+    <h2>HTML5 Video</h2>
+    <video width="640" height="360" controls autoplay muted loop poster="thumbnail.jpg">
+        <!-- Common attributes:
+            - controls: displays play/pause/volume controls
+            - autoplay: starts playing automatically (often requires muted)
+            - muted: mutes the video (required by many browsers for autoplay)
+            - loop: repeats the video when it ends
+            - poster: image to show before the video loads/plays
+        -->
+        <source src="sample-video.mp4" type="video/mp4">
+        <source src="sample-video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>HTML5 Audio</h2>
+    <audio controls autoplay loop muted>
+        <!-- Common attributes:
+            - controls: displays play/pause/volume
+            - autoplay: starts audio automatically (usually needs muted)
+            - loop: plays the audio repeatedly
+            - muted: starts audio in muted state
+        -->
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        <source src="sample-audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Embedding YouTube Video</h2>
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/XZwBNDGuWGU?autoplay=1&mute=1&loop=1&playlist=XZwBNDGuWGU" 
+            title="YouTube video player" 
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        <!-- Common attributes:
+            - width / height: controls the size of the embedded video
+            - src: URL of the video to embed (YouTube embed URL)
+            - allow: defines which features the iframe can use
+            - allowfullscreen: enables full-screen toggle
+        -->
+    </iframe>
+
+</body>
+</html>

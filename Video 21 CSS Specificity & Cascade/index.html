@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascading Algorithm, CSS Specificity & Cascade</title>
+    <style>
+        /* Specificity: 0 (lowest) */
+        * {
+            color: gray;
+        }
+
+        /* Specificity: 1 (type selector) */
+        h1 {
+            color: aqua;
+        }
+
+        /* Specificity: 10 (class selector) */
+        .cpurple {
+            color: purple;
+        }
+
+        /* Specificity: 1 (element) + 10 (class) = 11 */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* Specificity: 10 (attribute selector) */
+        [data-x="a"] {
+            color: maroon;
+        }
+
+        /* Specificity: 10 (class selector) */
+        .cred {
+            color: red;
+        }
+
+        /* Specificity: 1 (element) + 10 (class) + 10 (class) + 10 (attribute) + 10 (pseudo-class) = 41 */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+
+        /* Specificity: 100 (ID selector) */
+        #unique {
+            color: green;
+        }
+
+        /* Same selector with !important (overrides all) */
+        .cpurple {
+            color: rgb(14, 32, 138) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- This h1 has multiple competing rules. Let's see who wins. -->
+        <!-- Inline style has specificity 1000 -->
+        <h1 class="yellow cred cpurple" data-x="a" id="unique" style="color: orange;">
+            CSS Specificity and Cascade
+        </h1>
+    </div>
+</body>
+
+</html>

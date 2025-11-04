@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and Block Elements</title>
+    <style>
+        .block {
+            background-color: #d0f0fd;
+            border: 1px solid #3399cc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inline {
+            background-color: #fde0d0;
+            border: 1px solid #cc6633;
+            padding: 2px 6px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Block vs Inline Elements</h1>
+
+    <div class="block">This is a &lt;div&gt; element - it's a <strong>block-level</strong> element.</div>
+    <p class="block">This is a &lt;p&gt; paragraph - another <strong>block-level</strong> element.</p>
+
+    <p>Here are some <span class="inline">inline</span> elements like 
+        <span class="inline">&lt;span&gt;</span>, 
+        <a href="#" class="inline">&lt;a&gt; (link)</a>, and 
+        <strong class="inline">&lt;strong&gt;</strong>.
+    </p>
+
+    <p>Block elements start on a new line and take up the full width available.</p>
+    <p>Inline elements stay within the line and only take up as much width as necessary.</p>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+        /* Universal Selector: resets margin and padding on all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Element Selector: targets all div elements */
+        div {
+            /* background-color: red; */
+        }
+
+        /* Class Selector: targets elements with class="red" */
+        .red {
+            background-color: red;
+        }
+
+        /* Id Selector: targets element with id="green" */
+        #green {
+            background-color: green;
+        }
+
+        /* Child Selector: targets p elements that are direct children of div */
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Descendant Selector: targets p elements anywhere inside a div (including nested) */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Note: div > p and div p will both apply to a p that is a direct child of div.
+           The styles might override each other if conflicting. */
+
+        /* Pseudo-classes for anchor elements */
+        a:link {
+            color: green; /* Unvisited links */
+        }
+
+        a:visited {
+            color: yellow; /* Visited links */
+        }
+
+        a:hover {
+            background-color: yellow; /* When hovering over a link */
+        }
+
+        a:active {
+            background-color: red; /* When a link is clicked */
+        }
+
+        /* Pseudo-class: first child paragraph */
+        p:first-child {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+
+    <div class="red">
+        I am a div
+        <article>
+            <p>I am a para inside div</p>
+        </article>
+    </div>
+
+    <div id="green">
+        I am another div
+    </div>
+
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Go to Google</a>
+    <a href="https://www.facebook2.com" target="_blank" rel="noopener noreferrer">Go to Facebook</a>
+</body>
+</html>
